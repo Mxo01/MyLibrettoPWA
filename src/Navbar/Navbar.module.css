@@ -1,0 +1,260 @@
+.nav {
+  position: fixed;
+  top: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logoImg {
+  width: 64px;
+  height: 64px;
+}
+
+.navH1 {
+  color: white;
+  margin-left: 20px;
+  font-size: 2em;
+  user-select: none;
+}
+
+.links {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linksHidden {
+  display: none;
+}
+
+.links .buttonLink {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  font-size: 1.1em;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  margin-left: 40px;
+  transition: .2s ease;
+}
+
+.links .buttonLink:hover {
+  transform: scale(1.2);
+}
+
+.links .route {
+  position: relative;
+  font-size: 1.1em;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.links .route::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+
+.links .route:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.dropMenu {
+  display: none;
+}
+
+.dropMenuHidden {
+  display: none;
+}
+
+.dropMenu:hover {
+  transform: scale(1.2);
+}
+
+.menuLinks {
+  display: none;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .logoImg {
+    width: 54px;
+    height: 54px;
+  }
+  
+  .navH1 {
+    color: white;
+    margin-left: 20px;
+    font-size: 1.8em;
+    user-select: none;
+  }
+  
+  .links {
+    display: none;
+  }
+
+  .dropMenu {
+    display: inline-flex;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    font-size: 1.8em;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin-left: 40px;
+    transition: .5s ease;
+  }
+
+  .menuLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menuLink {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttonLink {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    font-size: 2em;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin: 20px;
+    transition: .2s ease;
+  }
+  
+  .buttonLink:hover {
+    transform: scale(1.2);
+  }
+  
+  .route {
+    position: relative;
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 5px;
+  }
+  
+  .route::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+  }
+  
+  .route:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .logoImg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .navH1 {
+    color: white;
+    margin-left: 15px;
+    font-size: 1.5em;
+    user-select: none;
+  }
+
+  .buttonLink {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    font-size: 1.6em;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin: 20px;
+    transition: .2s ease;
+  }
+
+  .route {
+    position: relative;
+    font-size: 1.6em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logoImg {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .navH1 {
+    color: white;
+    margin-left: 15px;
+    font-size: 1.2em;
+    user-select: none;
+  }
+}

@@ -1,0 +1,1511 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  height: 500px;
+  margin-top: 30px;
+  background: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  overflow: hidden;
+} 
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58%;
+  height: 100%;
+  color: white;
+  background-color: transparent;
+  padding: 80px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.logoLogin {
+  color: white;
+  font-size: 30px;
+}
+
+.textItem h2 {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.textItem p {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.socialIcon a ion-icon {
+  color: white;
+  font-size: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.socialIcon a:hover ion-icon {
+  transform: scale(1.2);
+}
+
+.loginSection {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 58%);
+  height: 100%;
+}
+
+.loginSectionActive {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 58%);
+  height: 100%;
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
+}
+
+#wrapSignUp {
+  position: absolute;
+  top: 450px;
+}
+
+.loginSectionActive #wrapSignIn {
+  transform: translateY(-450px);
+}
+
+.loginSectionActive #wrapSignUp {
+  transform: translateY(-450px);
+}
+
+.loginTitle {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+.signupTitle {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+.forgotPassword {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.forgotText {
+  color: white;
+  margin: 5px;
+}
+
+.forgotLink {
+  color: #0ef;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
+}
+
+.forgotLink:active {
+  color: #00b7c4;
+}
+
+.resetButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.confirmReset {
+  position: relative;
+  width: 80%;
+  height: 30px;
+  background: #0ef;
+  box-shadow: 0 0 10px #0ef;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+.confirmReset:hover {
+  background: #00cbda;
+  box-shadow: 0 0 10px #00cbda;
+}
+
+.confirmReset:active {
+  background: #00b7c4;
+  box-shadow: 0 0 10px #00b7c4;
+}
+
+.back {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: orange;
+  box-shadow: 0 0 5px orange;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+.back:hover {
+  background: rgb(223, 147, 7);
+  box-shadow: 0 0 5px rgb(223, 147, 7);
+}
+
+.back:active {
+  background: rgb(185, 124, 11);
+  box-shadow: 0 0 5px rgb(185, 124, 11);
+}
+
+.backIcon {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 500;
+  justify-content: center;
+}
+
+.inputGroup {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin: 30px 15px;
+  border-bottom: 2px solid white;
+}
+
+.icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: white;
+  line-height: 57px;
+}
+
+.iconPwd {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: white;
+  line-height: 57px;
+  cursor: pointer;
+}
+
+::-ms-reveal {
+  display: none;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: white;
+  pointer-events: none;
+  transition: .5s;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.inputGroup input {
+  width: 88%;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 0 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.inputGroup input:focus~label, .inputGroup input:valid~label {
+  top: -5px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  margin: -5px 15px 15px 15px;
+}
+
+.remember label {
+  display: flex;
+  color: white;
+  font-size: 14px;
+}
+
+.remember input {
+  accent-color: #0ef;
+  cursor: pointer;
+  margin-right: 5px;
+  position: relative;
+  bottom: 1px;
+}
+
+.rememberSignUp {
+  display: flex;
+  align-items: center;
+  margin: -5px 15px 15px 15px;
+}
+
+.rememberSignUp label {
+  display: flex;
+  color: white;
+  font-size: 14px;
+}
+
+.rememberSignUp input {
+  accent-color: orange;
+  cursor: pointer;
+  margin-right: 5px;
+  position: relative;
+  bottom: 1px;
+}
+
+.loginBtn {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: #0ef;
+  box-shadow: 0 0 10px #0ef;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+.fieldHidden {
+  display: none;
+}
+
+.loginBtn:hover {
+  background: #00cbda;
+  box-shadow: 0 0 10px #00cbda;
+}
+
+.loginBtn:active {
+  background: #00b7c4;
+  box-shadow: 0 0 10px #00b7c4;
+}
+
+.signUpLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.signUpText {
+  color: white;
+  margin: 5px;
+}
+
+.signUpBtnLink {
+  color: #0ef;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.signUpBtnLink:hover {
+  text-decoration: underline;
+}
+
+.signUpBtnLink:active {
+  color: #00b7c4;
+}
+
+.signUpBtn {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: orange;
+  box-shadow: 0 0 10px orange;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+.signUpBtn:hover {
+  background: rgb(223, 147, 7);
+  box-shadow: 0 0 10px rgb(223, 147, 7);
+}
+
+.signUpBtn:active {
+  background: rgb(185, 124, 11);
+  box-shadow: 0 0 10px rgb(185, 124, 11);
+}
+
+.signInLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.signInText {
+  color: white;
+  margin: 5px;
+}
+
+.signInBtnLink {
+  color: orange;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.signInBtnLink:hover {
+  text-decoration: underline;
+}
+
+.signInBtnLink:active {
+  color: rgb(185, 124, 11);
+}
+
+.errorMessage {
+  font-size: 12px;
+  margin-top: 10px;
+  color: red;
+  text-align: center;
+}
+
+.autoLogin {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 20px;
+  background: #0ef;
+  box-shadow: 0 0 5px #0ef;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  transition: .2s ease;
+}
+
+.autoLogin:hover {
+  background: #00cbda;
+  box-shadow: 0 0 10px #00cbda;
+  transform: scale(1.2);
+}
+
+.autoLogin:active {
+  background: #00b7c4;
+  box-shadow: 0 0 10px #00b7c4;
+}
+
+.autoLoginHidden {
+  display: none;
+}
+
+.buttonIcon {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 100%;
+  font-size: 1.5em;
+  background-color: rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 450px;
+    margin-top: 30px;
+    background: var(--background-image);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .logoLogin {
+    color: white;
+    font-size: 25px;
+  }
+  
+  .textItem h2 {
+    font-size: 30px;
+    line-height: 1;
+  }
+  
+  .textItem p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .socialIcon a ion-icon {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .5s ease;
+  }
+
+  .loginTitle {
+    font-size: 26px;
+    color: white;
+    text-align: center;
+  }
+  
+  .signupTitle {
+    font-size: 26px;
+    color: white;
+    text-align: center;
+  }
+  
+  .inputGroup {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin: 25px 15px;
+    border-bottom: 2px solid white;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.1em;
+    color: white;
+    line-height: 57px;
+  }
+
+  .iconPwd {
+    position: absolute;
+    right: 8px;
+    font-size: 1.1em;
+    color: white;
+    line-height: 57px;
+    cursor: pointer;
+  }
+  
+  .label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+  .inputGroup input {
+    width: 88%;
+    height: 40px;
+    font-size: 14px;
+    color: white;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  
+  .loginBtn {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+  }
+
+  .signUpBtn {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    background: orange;
+    box-shadow: 0 0 10px orange;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+  }
+
+  .autoLogin {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    margin: 20px;
+    background: #0ef;
+    box-shadow: 0 0 5px #0ef;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .2s ease;
+  }
+
+  .confirmReset {
+    position: relative;
+    width: 80%;
+    height: 30px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+  }
+
+  .back {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: orange;
+    box-shadow: 0 0 5px orange;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    color: white;
+    background-color: transparent;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .logoLogin {
+    color: white;
+    font-size: 22px;
+  }
+  
+  .textItem h2 {
+    font-size: 26px;
+    line-height: 1;
+  }
+  
+  .textItem p {
+    font-size: 12px;
+    margin: 10px 0;
+  }
+  
+  .loginTitle {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+  }
+  
+  .signupTitle {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+  }
+  
+  .inputGroup {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin: 25px 15px;
+    border-bottom: 2px solid white;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1em;
+    color: white;
+    line-height: 57px;
+  }
+
+  .iconPwd {
+    position: absolute;
+    right: 8px;
+    font-size: 1em;
+    color: white;
+    line-height: 57px;
+    cursor: pointer;
+  }
+  
+  .label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+  .inputGroup input {
+    width: 88%;
+    height: 40px;
+    font-size: 12px;
+    color: white;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  
+  .loginBtn {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+  }
+
+  .signUpBtn {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    background: orange;
+    box-shadow: 0 0 10px orange;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+  }
+  
+  .remember label {
+    display: flex;
+    color: white;
+    font-size: 12px;
+  }
+
+  .rememberSignUp label {
+    display: flex;
+    color: white;
+    font-size: 12px;
+  }
+
+  .forgotPassword {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 15px;
+  }  
+
+  .confirmReset {
+    position: relative;
+    width: 80%;
+    height: 30px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+  }
+
+  .back {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: orange;
+    box-shadow: 0 0 5px orange;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+
+  .signUpLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .signInLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 15px 0;
+  }
+
+  .autoLogin {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 20px;
+    background: #0ef;
+    box-shadow: 0 0 5px #0ef;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .2s ease;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 380px;
+    height: 450px;
+    margin-top: 30px;
+    background: var(--background-image);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .item {
+    display: none;
+  }
+
+  .loginSection {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .loginSectionActive {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .loginTitle {
+    font-size: 28px;
+    color: white;
+    text-align: center;
+  }
+  
+  .signupTitle {
+    font-size: 28px;
+    color: white;
+    text-align: center;
+  }
+  
+  .inputGroup {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin: 25px 15px;
+    border-bottom: 2px solid white;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: white;
+    line-height: 57px;
+  }
+
+  .iconPwd {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: white;
+    line-height: 57px;
+    cursor: pointer;
+  }
+  
+  .label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+  .inputGroup input {
+    width: 88%;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  
+  .loginBtn {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+  }
+
+  .signUpBtn {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: orange;
+    box-shadow: 0 0 10px orange;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+  }
+  
+  .remember label {
+    display: flex;
+    color: white;
+    font-size: 16px;
+  }
+
+  .rememberSignUp label {
+    display: flex;
+    color: white;
+    font-size: 16px;
+  }
+
+  .forgotPassword {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .confirmReset {
+    position: relative;
+    width: 80%;
+    height: 30px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+  }
+
+  .back {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: orange;
+    box-shadow: 0 0 5px orange;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+
+  .signUpLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .signInLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin: 15px 0;
+  }
+
+  .autoLogin {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    margin: 20px;
+    background: #0ef;
+    box-shadow: 0 0 5px #0ef;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .2s ease;
+  }
+}
+
+@media (max-width: 600px) {
+  .loginTitle {
+    font-size: 26px;
+    color: white;
+    text-align: center;
+  }
+  
+  .signupTitle {
+    font-size: 26px;
+    color: white;
+    text-align: center;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.1em;
+    color: white;
+    line-height: 57px;
+  }
+  
+  .iconPwd {
+    position: absolute;
+    right: 8px;
+    font-size: 1.1em;
+    color: white;
+    line-height: 57px;
+    cursor: pointer;
+  }
+  
+  .label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+  .inputGroup input {
+    width: 88%;
+    height: 40px;
+    font-size: 14px;
+    color: white;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  
+  .loginBtn {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+  }
+
+  .signUpBtn {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    background: orange;
+    box-shadow: 0 0 10px orange;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+  }
+  
+  .remember label {
+    display: flex;
+    color: white;
+    font-size: 14px;
+  }
+
+  .rememberSignUp label {
+    display: flex;
+    color: white;
+    font-size: 14px;
+  }
+
+  .forgotPassword {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .confirmReset {
+    position: relative;
+    width: 80%;
+    height: 30px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+  }
+
+  .back {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: orange;
+    box-shadow: 0 0 5px orange;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+
+  .signUpLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .signInLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin: 15px 0;
+  }
+
+  .autoLogin {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 20px;
+    background: #0ef;
+    box-shadow: 0 0 5px #0ef;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .2s ease;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 330px;
+    height: 450px;
+    margin-top: 30px;
+    background: var(--background-image);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .loginTitle {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+  }
+  
+  .signupTitle {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1em;
+    color: white;
+    line-height: 57px;
+  }
+  
+  .iconPwd {
+    position: absolute;
+    right: 8px;
+    font-size: 1em;
+    color: white;
+    line-height: 57px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 280px;
+    height: 450px;
+    margin-top: 30px;
+    background: var(--background-image);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .loginTitle {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+  }
+  
+  .signupTitle {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+  }
+  
+  .remember label {
+    display: flex;
+    color: white;
+    font-size: 12px;
+  }
+
+  .rememberSignUp label {
+    display: flex;
+    color: white;
+    font-size: 12px;
+  }
+
+  .forgotPassword {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  .confirmReset {
+    position: relative;
+    width: 80%;
+    height: 30px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+  }
+
+  .back {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: orange;
+    box-shadow: 0 0 5px orange;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+
+  .signUpLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .signInLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 340px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 260px;
+    height: 450px;
+    margin-top: 30px;
+    background: var(--background-image);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .formWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: 1s ease-in-out;
+  }
+
+  .inputGroup {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin: 20px 15px;
+    border-bottom: 2px solid white;
+  }
+
+  .label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+  .inputGroup input {
+    width: 88%;
+    height: 40px;
+    font-size: 12px;
+    color: white;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  
+  .remember label {
+    display: flex;
+    color: white;
+    font-size: 12px;
+  }
+
+  .rememberSignUp label {
+    display: flex;
+    color: white;
+    font-size: 12px;
+  }
+
+  .loginBtn {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+  }
+
+  .signUpBtn {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background: orange;
+    box-shadow: 0 0 10px orange;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+  }
+
+  .forgotPassword {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  .signUpLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .signInLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 15px 0;
+  }
+}

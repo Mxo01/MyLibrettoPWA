@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --wrapper-color: rgb(47, 42, 49);
+  --text-color:  white;
+  --shadow: rgb(32, 29, 33);
+  --background-image: url("./img/backgroundDark.jpg");
+  --background-image-blur: url("./img/backgroundDarkBlur.jpg");
+}
+
+.light-theme {
+  --wrapper-color: white;
+  --text-color: black;
+  --shadow: rgba(61, 61, 61, 0.455);
+  --background-image: url("./img/backgroundCap.jpg");
+  --background-image-blur: url("./img/backgroundCapBlur.jpg");
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  height: -webkit-fill-available;
+  background: var(--background-image-blur);
+  background-position: center;
+  background-size: cover;
+}

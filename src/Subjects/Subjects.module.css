@@ -1,0 +1,1301 @@
+.template {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 550px;
+  background: transparent;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.subLeft {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  background: var(--wrapper-color);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+.subRight {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  background: var(--wrapper-color);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.title {
+  padding: 0px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background: orange;
+  box-shadow: 0 10px 30px rgba(255, 166, 0, 0.5);
+}
+
+.titleH2 {
+  color: white;
+  padding: 10px;
+  font-size: 2.5em;
+  user-select: none;  
+}
+
+.gradesList {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: auto;
+}
+
+.add {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 20px;
+  background: #0ef;
+  box-shadow: 0 0 5px #0ef;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  transition: .2s ease;
+}
+
+.add:hover {
+  background: #00cbda;
+  box-shadow: 0 0 10px #00cbda;
+  transform: scale(1.2);
+}
+
+.add:active {
+  background: #00b7c4;
+  box-shadow: 0 0 10px #00b7c4;
+}
+
+.buttonIcon {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 100%;
+  font-size: 1.5em;
+  background-color: rgba(0,0,0,0.05);
+}
+
+.addTax {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 20px;
+  background: orange;
+  box-shadow: 0 0 5px orange;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  transition: .2s ease;
+}
+
+.addTax:hover {
+  background: rgb(223, 149, 11);
+  box-shadow: 0 0 10px rgb(223, 149, 11);
+  transform: scale(1.2);
+}
+
+.addTax:active {
+  background: rgb(167, 114, 14);
+  box-shadow: 0 0 10px rgb(167, 114, 14);
+}
+
+#grades {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: min-content;
+  overflow: hidden;
+}
+
+.taxes {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: auto;
+}
+
+#tax {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: min-content;
+  overflow: hidden;
+}
+
+.addedExam {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  border-left: 3px solid orange;
+  margin: 10px;
+  margin-left: 10px;
+}
+
+.addedExam:hover {
+  border-left: 3px solid #0ef;
+}
+
+.examP {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.examPHidden {
+  display: none;
+}
+
+.gradeP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: orange;
+  font-size: 36px;
+}
+
+.remainingP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0ef;
+  font-size: 36px;
+}
+
+.nameAndCfu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.nameAndAmount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.expiredNameAmountP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
+  text-decoration: line-through 2px solid rgb(255, 0, 0);
+}
+
+.nameP {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+.expiredNameP {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  opacity: 50%;
+  font-size: 18px;
+}
+
+.cfuP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 238, 255, 0.623);
+  font-size: 14px;
+}
+
+.amountP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: orange;
+  font-size: 14px;
+}
+
+.expiredAmountP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 50%;
+  color: orange;
+  font-size: 14px;
+}
+
+.editInputsGHidden {
+  display: none;
+}
+
+.editInputsG p {
+  display: flex;
+  color: var(--text-color);
+  font-size: 20px;
+  margin-left: 20px
+}
+
+.edits {
+  display: flex;
+  padding: 10px
+}
+
+.editableG {
+  color: var(--text-color);
+  position: relative;
+  width: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: transparent;
+  border: 2px solid orange;
+  border-radius: 15px;
+  font-size: 22px;
+  padding: 10px;
+  margin-left: 10px;
+  outline: none;
+}
+
+.editInputsTHidden {
+  display: none;
+}
+
+.editInputsT p {
+  display: flex;
+  color: var(--text-color);
+  font-size: 20px;
+  margin-left: 20px
+}
+
+.editableT {
+  color: var(--text-color);
+  position: relative;
+  width: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 15px;
+  font-size: 22px;
+  padding: 10px;
+  margin-left: 10px;
+  outline: none;
+}
+
+.confirmEdit {
+  margin: 10px;
+  background: transparent;
+  color: rgb(32, 190, 0);
+  border: none;
+  outline: none;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.confirmEdit:hover {
+  color: rgb(29, 136, 7);
+}
+
+.confirmEdit:active {
+  color: rgb(26, 97, 12);
+}
+
+.taxNameHidden {
+  display: none;
+}
+
+.taxName {
+  color: var(--text-color);
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+.addedTax {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  border-left: 3px solid #0ef;
+  margin: 10px;
+  margin-left: 10px;
+}
+
+.addedTax:hover {
+  border-left: 3px solid orange;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin: 20px;
+}
+
+.delete {
+  margin: 10px;
+  background: transparent;
+  color: rgb(211, 4, 4);
+  border: none;
+  outline: none;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: rgb(165, 39, 39);
+}
+
+.delete:active {
+  color: rgb(141, 21, 21);
+}
+
+.edit {
+  margin: 10px;
+  background: transparent;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.edit:hover {
+  color: rgb(168, 168, 168);
+}
+
+.edit:active {
+  color: rgb(114, 114, 114);
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 250px;
+  height: 350px;
+  background: var(--wrapper-color);
+  box-shadow: 0 5px 15px var(--shadow);
+  border-radius: 25px;
+  text-align: center;
+  padding: 0 30px 30px; 
+  display: none;
+}
+
+.openPopup {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 250px;
+  height: 350px;
+  background: var(--wrapper-color);
+  box-shadow: 0 5px 15px var(--shadow);
+  border-radius: 25px;
+  text-align: center;
+  padding: 0 30px 30px; 
+}
+
+.popupImg {
+  width: 50px;
+  margin-top: -30px;
+}
+
+.popupTitle {
+  font-size: 24px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 25px 0;
+  border-bottom: 2px solid var(--text-color);
+}
+
+.icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: var(--text-color);
+  line-height: 55px;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--text-color);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-color);
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.input {
+  width: 87%;
+  height: 40px;
+  font-size: 16px;
+  color: var(--text-color);
+  padding: 0 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.inputDate {
+  opacity: 0;
+  width: 100%;
+  transition: .2s;
+}
+
+.inputDate::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.inputDate:focus, .inputDate:valid {
+  opacity: 100%;
+}
+
+.input:focus~label, .input:valid~label {
+  top: -5px;
+}
+
+.popupButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#confirmAdd {
+  position: relative;
+  width: 80%;
+  height: 30px;
+  background: #0ef;
+  box-shadow: 0 0 10px #0ef;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+#confirmAdd:hover {
+  background: #00cbda;
+  box-shadow: 0 0 10px #00cbda;
+}
+
+#confirmAdd:active {
+  background: #00b7c4;
+  box-shadow: 0 0 10px #00b7c4;
+}
+
+#confirmAddTax {
+  position: relative;
+  width: 80%;
+  height: 30px;
+  background: orange;
+  box-shadow: 0 0 10px orange;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+#confirmAddTax:hover {
+  background: rgb(223, 149, 11);
+  box-shadow: 0 0 10px rgb(223, 149, 11);
+}
+
+#confirmAddTax:active {
+  background: rgb(167, 114, 14);
+  box-shadow: 0 0 10px rgb(167, 114, 14);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.close {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: rgb(224, 42, 42);
+  box-shadow: 0 0 5px rgb(224, 42, 42);
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+.close:hover {
+  background: rgb(201, 47, 47);
+  box-shadow: 0 0 5px rgb(201, 47, 47);
+}
+
+.close:active {
+  background: rgb(179, 42, 42);
+  box-shadow: 0 0 5px rgb(179, 42, 42);
+}
+
+.closeIcon {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 500;
+  justify-content: center;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .template {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 550px;
+    background: transparent;
+    padding: 10px;
+    overflow: auto;
+  }
+
+  .subLeft {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+    padding: 10px;
+    background: var(--wrapper-color);
+    border-radius: 25px;
+    overflow: hidden;
+  }
+
+  .subRight {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    padding: 10px;
+    background: var(--wrapper-color);
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .titleH2 {
+    color: white;
+    padding: 10px;
+    font-size: 2em;
+    user-select: none;  
+  }
+
+  .add {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 20px;
+    background: #0ef;
+    box-shadow: 0 0 5px #0ef;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .2s ease;
+  }
+
+  .addTax {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 20px;
+    background: orange;
+    box-shadow: 0 0 5px orange;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .2s ease;
+  }
+
+  .gradeP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    font-size: 26px;
+  }
+  
+  .remainingP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0ef;
+    font-size: 26px;
+  }
+  
+  .nameP {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 16px;
+  }
+
+  .expiredNameP {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    opacity: 50%;
+    font-size: 16px;
+  }
+  
+  .cfuP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 238, 255, 0.623);
+    font-size: 12px;
+  }
+
+  .amountP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    font-size: 12px;
+  }
+  
+  .expiredAmountP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 50%;
+    color: orange;
+    font-size: 12px;
+  }
+
+  .editInputsG p {
+    display: flex;
+    color: var(--text-color);
+    font-size: 16px;
+    margin-left: 20px
+  }
+
+  .editableG {
+    color: var(--text-color);
+    position: relative;
+    width: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    border: 2px solid orange;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 10px;
+    margin-left: 10px;
+    outline: none;
+  }
+
+  .editInputsT p {
+    display: flex;
+    color: var(--text-color);
+    font-size: 16px;
+    margin-left: 20px
+  }
+
+  .editableT {
+    color: var(--text-color);
+    position: relative;
+    width: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 10px;
+    margin-left: 10px;
+    outline: none;
+  }
+
+  .confirmEdit {
+    margin: 10px;
+    background: transparent;
+    color: rgb(32, 190, 0);
+    border: none;
+    outline: none;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .delete {
+    margin: 10px;
+    background: transparent;
+    color: rgb(211, 4, 4);
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .edit {
+    margin: 10px;
+    background: transparent;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }    
+}
+
+@media (max-width: 600px) {
+  .titleH2 {
+    color: white;
+    padding: 10px;
+    font-size: 1.8em;
+    user-select: none;  
+  }
+
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 300px;
+    background: var(--wrapper-color);
+    box-shadow: 0 5px 15px var(--shadow);
+    border-radius: 25px;
+    text-align: center;
+    padding: 0 30px 30px; 
+    display: none;
+  }
+  
+  .openPopup {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 300px;
+    background: var(--wrapper-color);
+    box-shadow: 0 5px 15px var(--shadow);
+    border-radius: 25px;
+    text-align: center;
+    padding: 0 30px 30px; 
+  }
+  
+  .popupImg {
+    width: 50px;
+    margin-top: -30px;
+  }
+  
+  .popupTitle {
+    font-size: 18px;
+    color: var(--text-color);
+    text-align: center;
+  }
+  
+  .inputGroup {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 20px 0;
+    border-bottom: 2px solid var(--text-color);
+  }
+  
+  .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1em;
+    color: var(--text-color);
+    line-height: 55px;
+  }
+  
+  .label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--text-color);
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  .input {
+    width: 87%;
+    height: 40px;
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  #confirmAdd {
+    position: relative;
+    width: 70%;
+    height: 25px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+  }
+
+  #confirmAddTax {
+    position: relative;
+    width: 70%;
+    height: 25px;
+    background: orange;
+    box-shadow: 0 0 10px orange;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+  }
+
+  .close {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background: rgb(224, 42, 42);
+    box-shadow: 0 0 5px rgb(224, 42, 42);
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .titleH2 {
+    color: white;
+    padding: 10px;
+    font-size: 1.6em;
+    user-select: none;  
+  }
+
+  .gradeP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    font-size: 24px;
+  }
+  
+  .remainingP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0ef;
+    font-size: 24px;
+  }
+  
+  .nameP {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 14px;
+  }
+
+  .expiredNameP {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    opacity: 50%;
+    font-size: 14px;
+  }
+  
+  .cfuP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 238, 255, 0.623);
+    font-size: 10px;
+  }
+
+  .amountP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    font-size: 10px;
+  }
+  
+  .expiredAmountP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 50%;
+    color: orange;
+    font-size: 10px;
+  }
+
+  .editInputsG p {
+    display: flex;
+    color: var(--text-color);
+    font-size: 14px;
+    margin-left: 20px
+  }
+
+  .editableG {
+    color: var(--text-color);
+    position: relative;
+    width: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    border: 2px solid orange;
+    border-radius: 15px;
+    font-size: 14px;
+    padding: 10px;
+    margin-left: 10px;
+    outline: none;
+  }
+
+  .editInputsT p {
+    display: flex;
+    color: var(--text-color);
+    font-size: 14px;
+    margin-left: 20px
+  }
+
+  .editableT {
+    color: var(--text-color);
+    position: relative;
+    width: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 15px;
+    font-size: 14px;
+    padding: 10px;
+    margin-left: 10px;
+    outline: none;
+  }
+
+  .confirmEdit {
+    margin: 10px;
+    background: transparent;
+    color: rgb(32, 190, 0);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .delete {
+    margin: 10px;
+    background: transparent;
+    color: rgb(211, 4, 4);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .edit {
+    margin: 10px;
+    background: transparent;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }    
+
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 180px;
+    height: 280px;
+    background: var(--wrapper-color);
+    box-shadow: 0 5px 15px var(--shadow);
+    border-radius: 25px;
+    text-align: center;
+    padding: 0 30px 30px; 
+    display: none;
+  }
+  
+  .openPopup {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 180px;
+    height: 280px;
+    background: var(--wrapper-color);
+    box-shadow: 0 5px 15px var(--shadow);
+    border-radius: 25px;
+    text-align: center;
+    padding: 0 30px 30px; 
+  }
+  
+  .popupImg {
+    width: 45px;
+    margin-top: -30px;
+  }
+  
+  .popupTitle {
+    font-size: 14px;
+    color: var(--text-color);
+    text-align: center;
+  }
+  
+  .inputGroup {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 15px 0;
+    border-bottom: 2px solid var(--text-color);
+  }
+  
+  .icon {
+    position: absolute;
+    right: 8px;
+    font-size: .9em;
+    color: var(--text-color);
+    line-height: 55px;
+  }
+  
+  .label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: var(--text-color);
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  .input {
+    width: 87%;
+    height: 40px;
+    font-size: 12px;
+    color: var(--text-color);
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  #confirmAdd {
+    position: relative;
+    width: 70%;
+    height: 25px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+  }
+
+  #confirmAddTax {
+    position: relative;
+    width: 70%;
+    height: 25px;
+    background: orange;
+    box-shadow: 0 0 10px orange;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+  }
+
+  .close {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background: rgb(224, 42, 42);
+    box-shadow: 0 0 5px rgb(224, 42, 42);
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+}

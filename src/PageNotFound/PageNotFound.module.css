@@ -1,0 +1,242 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 800px;
+  height: 550px;
+  margin-top: 20px;
+  padding: 10px;
+  background: var(--wrapper-color);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.netErrImg {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+.title {
+  font-size: 40px;
+  color: var(--text-color);
+}
+
+.netErrText {
+  width: 60%;
+  text-align: center;
+  font-size: 20px;
+  color: var(--text-color);
+  margin: 20px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: auto;
+  height: 40px;
+  background: orange;
+  box-shadow: 0 0 10px orange;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 20px;
+  border: none;
+  outline: none;
+}
+
+.button:hover {
+  background: rgb(223, 147, 7);
+  box-shadow: 0 0 10px rgb(223, 147, 7);
+}
+
+.button:active {
+  background: rgb(185, 124, 11);
+  box-shadow: 0 0 10px rgb(185, 124, 11);
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 450px;
+    margin-top: 20px;
+    padding: 10px;
+    background: var(--wrapper-color);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .netErrImg {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+  }
+  
+  .title {
+    font-size: 30px;
+    color: var(--text-color);
+  }
+  
+  .netErrText {
+    width: 60%;
+    text-align: center;
+    font-size: 15px;
+    color: var(--text-color);
+    margin: 20px;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: auto;
+    height: 35px;
+    background: orange;
+    box-shadow: 0 0 10px orange;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 20px;
+    border: none;
+    outline: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 450px;
+    margin-top: 20px;
+    padding: 10px;
+    background: var(--wrapper-color);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .netErrImg {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+  }
+  
+  .title {
+    font-size: 25px;
+    color: var(--text-color);
+  }
+  
+  .netErrText {
+    width: 60%;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-color);
+    margin: 20px;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: auto;
+    height: 30px;
+    background: orange;
+    box-shadow: 0 0 10px orange;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 20px;
+    border: none;
+    outline: none;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 450px;
+    margin-top: 20px;
+    padding: 10px;
+    background: var(--wrapper-color);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .netErrImg {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+  }
+  
+  .title {
+    font-size: 20px;
+    color: var(--text-color);
+  }
+  
+  .netErrText {
+    width: 70%;
+    text-align: center;
+    font-size: 10px;
+    color: var(--text-color);
+    margin: 20px;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: auto;
+    height: 25px;
+    background: orange;
+    box-shadow: 0 0 10px orange;
+    font-size: 10px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 20px;
+    border: none;
+    outline: none;
+  }
+}
