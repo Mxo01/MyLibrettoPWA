@@ -1,5 +1,6 @@
 import popupExamLogo from '../img/exam.png';
 import popupTaxLogo from '../img/taxes.png';
+import logo from '../img/icon512.png';
 import { firebaseAPP, firebaseDB } from '../firebaseConfig.js';
 import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -367,6 +368,12 @@ const Subjects = () => {
           background: sessionStorage.getItem('LightMode') === 'true' ? 'white' : 'rgb(47, 42, 49)'
         }
       });
+
+      // Send push notification
+      new Notification('MyLibretto',  {
+        body: 'Your tax ' + number + ' expires in 7 days!',
+        icon: logo
+      });
     }
     
     if (remaining === '-1D' && !expiration1 && (localStorage.getItem('Notify-Permission') === 'true')) {
@@ -380,6 +387,12 @@ const Subjects = () => {
           color:'orange',
           background: sessionStorage.getItem('LightMode') === 'true' ? 'white' : 'rgb(47, 42, 49)'
         }
+      });
+
+      // Send push notification
+      new Notification('MyLibretto',  {
+        body: 'Your tax ' + number + ' expires tomorrow!',
+        icon: logo
       });
     }
 
@@ -395,6 +408,12 @@ const Subjects = () => {
           background: sessionStorage.getItem('LightMode') === 'true' ? 'white' : 'rgb(47, 42, 49)'
         }
       });
+
+      // Send push notification
+      new Notification('MyLibretto',  {
+        body: 'Your tax ' + number + ' has expired!',
+        icon: logo
+      });
     }
     
     return remaining;
@@ -403,7 +422,7 @@ const Subjects = () => {
   return (
     <>
       <Toaster
-        position="bottom-right"
+        position="bottom-left"
         reverseOrder={true}
       />
       {/*-Base template*/}
