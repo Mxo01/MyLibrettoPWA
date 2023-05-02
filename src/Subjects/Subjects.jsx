@@ -368,12 +368,16 @@ const Subjects = () => {
           background: sessionStorage.getItem('LightMode') === 'true' ? 'white' : 'rgb(47, 42, 49)'
         }
       });
-
+      
       // Send push notification
-      new Notification('MyLibretto',  {
-        body: 'Your tax ' + number + ' expires in 7 days!',
-        icon: logo
-      });
+      if ('serviceWorker' in navigator && 'PushManager' in window) {
+        navigator.serviceWorker.ready.then((registration) => {
+          registration.showNotification('MyLibretto', {
+            body: 'Your tax ' + number + ' expires in 7 days!',
+            icon: logo
+          });
+        });
+      }
     }
     
     if (remaining === '-1D' && !expiration1 && (localStorage.getItem('Notify-Permission') === 'true')) {
@@ -388,12 +392,16 @@ const Subjects = () => {
           background: sessionStorage.getItem('LightMode') === 'true' ? 'white' : 'rgb(47, 42, 49)'
         }
       });
-
+      
       // Send push notification
-      new Notification('MyLibretto',  {
-        body: 'Your tax ' + number + ' expires tomorrow!',
-        icon: logo
-      });
+      if ('serviceWorker' in navigator && 'PushManager' in window) {
+        navigator.serviceWorker.ready.then((registration) => {
+          registration.showNotification('MyLibretto', {
+            body: 'Your tax ' + number + ' expires tomorrow!',
+            icon: logo
+          });
+        });
+      }
     }
 
     if (remaining === '!' && !expirationExp && (localStorage.getItem('Notify-Permission') === 'true')) {
@@ -408,12 +416,16 @@ const Subjects = () => {
           background: sessionStorage.getItem('LightMode') === 'true' ? 'white' : 'rgb(47, 42, 49)'
         }
       });
-
+      
       // Send push notification
-      new Notification('MyLibretto',  {
-        body: 'Your tax ' + number + ' has expired!',
-        icon: logo
-      });
+      if ('serviceWorker' in navigator && 'PushManager' in window) {
+        navigator.serviceWorker.ready.then((registration) => {
+          registration.showNotification('MyLibretto', {
+            body: 'Your tax ' + number + ' has expired!',
+            icon: logo
+          });
+        });
+      }
     }
     
     return remaining;
