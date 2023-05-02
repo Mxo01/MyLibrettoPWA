@@ -370,7 +370,7 @@ const Subjects = () => {
       });
       
       // Send push notification
-      if ('serviceWorker' in navigator && 'PushManager' in window) {
+      if ('serviceWorker' in navigator) {
         navigator.serviceWorker.ready.then((registration) => {
           registration.showNotification('MyLibretto', {
             body: 'Your tax ' + number + ' expires in 7 days!',
@@ -394,7 +394,7 @@ const Subjects = () => {
       });
       
       // Send push notification
-      if ('serviceWorker' in navigator && 'PushManager' in window) {
+      if ('serviceWorker' in navigator) {
         navigator.serviceWorker.ready.then((registration) => {
           registration.showNotification('MyLibretto', {
             body: 'Your tax ' + number + ' expires tomorrow!',
@@ -418,7 +418,7 @@ const Subjects = () => {
       });
       
       // Send push notification
-      if ('serviceWorker' in navigator && 'PushManager' in window) {
+      if ('serviceWorker' in navigator) {
         navigator.serviceWorker.ready.then((registration) => {
           registration.showNotification('MyLibretto', {
             body: 'Your tax ' + number + ' has expired!',
