@@ -114,17 +114,17 @@ const Subjects = () => {
       grade: grade,
       cfu: cfu,
       isExam: true
-    }).then(() => {
-      // Send a success popup
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Your exam has been added',
-        color: sessionStorage.getItem('LightMode') === 'true' ? 'black' : 'white',
-        background: sessionStorage.getItem('LightMode') === 'true' ? 'white' : 'rgb(47, 42, 49)',
-        showConfirmButton: false,
-        timer: 1500
-      });
+    });
+
+    // Send a success popup
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Your exam has been added',
+      color: sessionStorage.getItem('LightMode') === 'true' ? 'black' : 'white',
+      background: sessionStorage.getItem('LightMode') === 'true' ? 'white' : 'rgb(47, 42, 49)',
+      showConfirmButton: false,
+      timer: 1500
     });
   }
 
@@ -144,17 +144,17 @@ const Subjects = () => {
       amount: taxAmount,
       expiration: taxExpiration,
       isTax: true
-    }).then(() => {
-      // Send a success popup
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Your tax has been added',
-        color: sessionStorage.getItem('LightMode') === 'true' ? 'black' : 'white',
-        background: sessionStorage.getItem('LightMode') === 'true' ? 'white' : 'rgb(47, 42, 49)',
-        showConfirmButton: false,
-        timer: 1500
-      });
+    });
+
+    // Send a success popup
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Your tax has been added',
+      color: sessionStorage.getItem('LightMode') === 'true' ? 'black' : 'white',
+      background: sessionStorage.getItem('LightMode') === 'true' ? 'white' : 'rgb(47, 42, 49)',
+      showConfirmButton: false,
+      timer: 1500
     });
   }
   
