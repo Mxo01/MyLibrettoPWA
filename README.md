@@ -21,7 +21,7 @@ Ovviamente l'applicazione (essendo una PWA) funziona completamente offline in qu
 - Deve essere registrato
 - Deve aver eseguito almeno una volta il log in con successo spuntando l'opzione "Remember me"
 
-Se le condizioni precedentemente descritte sono soddisfatte, nella schermata di accesso comparirà un bottone autoesplicativo che indica la possibilità di bypassare il log in. Questo risulta particolamente comodo quando l'utente è offline (quindi non potrà completare il log in con successo) in quanto gli permette di usufruire di tutte le funzionalità che avrebbe se fosse online (putroppo qualche feature grafica si perde ma stiamo parlando di qualche popup, niente di particolare). 
+Se le condizioni precedentemente descritte sono soddisfatte, nella schermata di accesso comparirà un bottone autoesplicativo che indica la possibilità di bypassare il log in. Questo risulta particolamente comodo quando l'utente è offline (quindi non potrà completare il log in con successo) in quanto gli permette di usufruire di tutte le funzionalità che avrebbe se fosse online. 
 
 Quindi se l'utente vorrà aggiungere un esame o una tassa ma è offline potrà in quanto grazie al service worker e la persistenza dei dati offline garantita da Firebase sarà in grado di accedere all'ultima versione dei dati memorizzata nell'IndexDB del browser e agli assets memorizzati in cache.
 
