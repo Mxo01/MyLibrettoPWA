@@ -5,9 +5,8 @@ const staticAssets = [
   '/'
 ];
 
-// Install event for service worker
+// Install event for service worker ok
 self.addEventListener('install', evt => {
-  self.skipWaiting(); // skip waiting for the new service worker to activate
   evt.waitUntil(
     // Open the static cache and add all static assets
     caches.open(staticCacheName).then(cache => {
@@ -18,7 +17,7 @@ self.addEventListener('install', evt => {
 
 // Activate event for service worker
 self.addEventListener('activate', evt => {
-  clients.claim(); // use the new service worker immediately without waiting for the old one to finish
+  clients.claim(); // activate new service worker instantly
   evt.waitUntil(
     caches.keys().then(keys => {
       return Promise.all(
@@ -45,3 +44,12 @@ self.addEventListener('fetch', evt => {
     );
   }
 });
+
+const broadcastChannel = new BroadcastChannel('sw-messages');
+
+// Listen for messages from clients
+broadcastChannel.onmessage = (evt) => {
+  if (evt.data.action === 'update') {
+    self.skipWaiting(); // skip waiting to install new service worker
+  }
+}

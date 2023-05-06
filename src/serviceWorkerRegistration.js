@@ -52,6 +52,8 @@ export function register(config) {
   }
 }
 
+const broadcastChannel = new BroadcastChannel('sw-messages');
+
 function registerValidSW(swUrl, config) {
   navigator.serviceWorker
     .register(swUrl)
@@ -72,6 +74,8 @@ function registerValidSW(swUrl, config) {
                   'tabs for this page are closed. See https://cra.link/PWA.'
               );
               
+              broadcastChannel.postMessage({ action: 'skipWaiting' }); // send message to main thread if there is an update available
+
               // Execute callback
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
