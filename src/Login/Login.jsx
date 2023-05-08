@@ -52,7 +52,8 @@ function getPermission(permission) {
 }
 
 try {
-  Notification.requestPermission().then(permission => getPermission(permission)); // try to get user permission
+  if (!('safari' in window)) Notification.requestPermission().then(permission => getPermission(permission)); // try to get user permission
+  else document.onclick = () => Notification.requestPermission().then(permission => getPermission(permission)); // get permission on user's click for Safari (MacOS)
 }
 
 catch (error) {

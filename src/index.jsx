@@ -29,7 +29,7 @@ broadcastChannel.onmessage = (evt) => {
           color: 'orange',
           background: 'transparent',
           marginLeft: '10px',
-        }} onClick={() => {toast.dismiss(t.id); broadcastChannel.postMessage({ action: 'update'}); window.location.reload()}}>
+        }} onClick={() => {toast.dismiss(t.id); broadcastChannel.postMessage({ action: 'update'}); window.location.reload(true)}}>
           Reload
         </button>
       </span>
